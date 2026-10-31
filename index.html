@@ -3,171 +3,376 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Kushan Priyadasun — Senior Supply Officer at Queensland Health and Oracle Database Administrator with 7+ years of experience.">
-  <meta name="theme-color" content="#07111f">
-  <title>Kushan Priyadasun | Professional Portfolio</title>
+  <title>Kushan Priyadasun — Senior Supply Officer & Oracle DBA</title>
+  <meta name="description" content="Kushan Priyadasun — Senior Supply Officer at Queensland Health and Oracle Database Administrator with 7+ years of experience. Based in Brisbane, Australia.">
+  <meta name="author" content="Kushan Priyadasun">
+  <meta name="theme-color" content="#f6f4ef" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0b0f17" media="(prefers-color-scheme: dark)">
+
+  <!-- Social sharing preview (LinkedIn, WhatsApp, etc.) -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Kushan Priyadasun — Senior Supply Officer & Oracle DBA">
+  <meta property="og:description" content="Healthcare supply operations at Queensland Health, backed by 7+ years of Oracle database administration.">
+  <meta property="og:url" content="https://kushan8825.github.io/Kushan_Priyadasun/">
+  <meta property="og:image" content="https://kushan8825.github.io/Kushan_Priyadasun/assets/images/kushan-portrait.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+
+  <!-- Apply saved theme before paint to avoid a flash -->
+  <script>
+    document.documentElement.classList.add('js');
+    try { const t = localStorage.getItem('theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Kushan Priyadasun",
+    "jobTitle": "Senior Supply Officer",
+    "worksFor": { "@type": "Organization", "name": "Queensland Health" },
+    "address": { "@type": "PostalAddress", "addressLocality": "Brisbane", "addressRegion": "QLD", "addressCountry": "AU" },
+    "email": "mailto:Kushanpriyadasun123@gmail.com",
+    "url": "https://kushan8825.github.io/Kushan_Priyadasun/"
+  }
+  </script>
 </head>
 <body>
-  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
-  <header class="header" id="top">
-    <a class="brand" href="#top"><span class="brand-mark">KP</span><span>Kushan<span class="accent">.</span></span></a>
-    <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false"><span></span><span></span><span></span></button>
-    <nav class="nav">
-      <a class="active" href="#home">Home</a><a href="#about">About</a><a href="#skills">Skills</a>
-      <a href="#experience">Experience</a><a href="#gallery">Gallery</a><a href="#contact">Contact</a>
+  <!-- Reusable icons -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12m0 0-5-5m5 5 5-5M5 21h14"/></symbol>
+      <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></symbol>
+      <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></symbol>
+      <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></symbol>
+      <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-12a7 7 0 0 1 14 0c0 5.8-7 12-7 12Z"/><circle cx="12" cy="9" r="2.5"/></symbol>
+      <symbol id="i-copy" viewBox="0 0 24 24"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h8"/></symbol>
+      <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 5 5L20 7"/></symbol>
+      <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M2 12h2m16 0h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+      <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 0 1 9.5 4 8 8 0 1 0 20 14.5Z"/></symbol>
+      <symbol id="i-db" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></symbol>
+      <symbol id="i-box" viewBox="0 0 24 24"><path d="M21 8 12 3 3 8v8l9 5 9-5V8Z"/><path d="m3 8 9 5 9-5M12 13v8"/></symbol>
+      <symbol id="i-people" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><path d="M16 4.5a3.5 3.5 0 0 1 0 7M18 14.5a6.5 6.5 0 0 1 3.5 5.5"/></symbol>
+      <symbol id="i-award" viewBox="0 0 24 24"><circle cx="12" cy="9" r="6"/><path d="m8.5 14-1.5 8 5-3 5 3-1.5-8"/></symbol>
+      <symbol id="i-cap" viewBox="0 0 24 24"><path d="m2 9 10-5 10 5-10 5L2 9Z"/><path d="M6 11v5c0 1.5 2.7 3 6 3s6-1.5 6-3v-5M22 9v6"/></symbol>
+    </defs>
+  </svg>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="nav-wrap">
+    <nav class="nav" aria-label="Primary">
+      <a class="brand" href="#top" aria-label="Kushan Priyadasun, home">
+        <span class="brand-mark">KP</span>
+        <span class="brand-name">Kushan Priyadasun</span>
+      </a>
+      <div class="nav-links" id="nav-links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#credentials">Credentials</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="nav-actions">
+        <button class="icon-btn" id="theme-toggle" type="button" aria-label="Toggle dark mode">
+          <svg class="ico ico-sun"><use href="#i-sun"/></svg>
+          <svg class="ico ico-moon"><use href="#i-moon"/></svg>
+        </button>
+        <a class="btn btn-ink btn-sm nav-cv" href="assets/Kushan-Priyadasun-CV.pdf" download>
+          <svg class="ico"><use href="#i-download"/></svg> CV
+        </a>
+        <button class="icon-btn menu-btn" id="menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+          <span></span><span></span>
+        </button>
+      </div>
     </nav>
-    <a class="button button-small button-outline cv-top" href="assets/Kushan-Priyadasun-CV.pdf" download>↓ <span>Download CV</span></a>
   </header>
 
-  <main>
-    <section class="hero section-wrap" id="home">
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero container" id="top">
       <div class="hero-copy">
-        <div class="eyebrow"><span class="pulse"></span> PROFESSIONAL PORTFOLIO · BRISBANE, AUSTRALIA</div>
-        <p class="intro-label">Hello, I'm</p>
-        <h1>Kushan <span class="gradient-text">Priyadasun</span></h1>
-        <div class="roles"><span>Senior Supply Officer</span><i></i><span>Oracle Database Administrator</span></div>
-        <p class="hero-description">A practical, customer-focused professional bringing together healthcare supply operations and 7+ years of database administration experience. I enjoy solving problems, supporting people and keeping essential services running smoothly.</p>
-        <div class="hero-actions">
-          <a class="button button-primary" href="assets/Kushan-Priyadasun-CV.pdf" download>↓ Download my CV</a>
-          <a class="button button-ghost" href="#experience">Explore experience <span>↗</span></a>
-        </div>
-        <div class="social-links">
-          <a href="mailto:Kushanpriyadasun123@gmail.com" aria-label="Email">✉</a>
-          <a href="tel:+61451906979" aria-label="Phone">☎</a>
-          <a href="#contact" aria-label="Contact">↗</a>
+        <p class="status reveal"><span class="dot"></span> Open to opportunities · Brisbane, QLD</p>
+        <h1 class="reveal">
+          Kushan<br><em>Priyadasun</em>
+        </h1>
+        <p class="hero-roles reveal">Senior Supply Officer <span>/</span> Oracle Database Administrator</p>
+        <p class="hero-lead reveal">
+          I keep essential services running — from the medical supplies that reach frontline
+          teams at Queensland Health to the production databases that businesses depend on.
+        </p>
+        <div class="hero-cta reveal">
+          <a class="btn btn-accent" href="#contact">Get in touch <svg class="ico"><use href="#i-arrow"/></svg></a>
+          <a class="btn btn-ghost" href="assets/Kushan-Priyadasun-CV.pdf" download><svg class="ico"><use href="#i-download"/></svg> Download CV</a>
         </div>
       </div>
-      <div class="hero-visual">
-        <div class="portrait-frame"><img src="assets/images/kushan-portrait.jpg" alt="Professional portrait of Kushan Priyadasun"></div>
-        <div class="portrait-glow"></div>
-        <div class="floating-card"><span class="status-dot"></span><div><b>Open to opportunities</b><small>Professional growth · Collaboration</small></div></div>
-        <div class="vertical-note">BUILD · LEARN · CONTRIBUTE</div>
+
+      <figure class="hero-photo reveal">
+        <img src="assets/images/kushan-portrait.jpg" width="763" height="1024" alt="Portrait of Kushan Priyadasun in a navy suit" fetchpriority="high">
+        <figcaption class="photo-chip">
+          <svg class="ico"><use href="#i-pin"/></svg>
+          <span><b>Queensland Health</b><small>Brisbane, Australia</small></span>
+        </figcaption>
+      </figure>
+
+      <dl class="stats reveal">
+        <div><dt>Database experience</dt><dd>7+ <small>years</small></dd></div>
+        <div><dt>Oracle certifications</dt><dd>4</dd></div>
+        <div><dt>Oracle versions supported</dt><dd>10g–23c</dd></div>
+        <div><dt>Core platforms</dt><dd>Oracle · SAP</dd></div>
+      </dl>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section container" id="about">
+      <header class="section-head reveal">
+        <span class="kicker">01 — About</span>
+        <h2>Two disciplines, <em>one focus:</em> reliability.</h2>
+      </header>
+
+      <div class="about">
+        <div class="about-text reveal">
+          <p class="lead">I’m a dedicated professional working across healthcare supply operations and enterprise database environments.</p>
+          <p>As a Senior Supply Officer with Queensland Health, I support the flow of medical supplies through ordering, scanning, requisition processing and procurement in SAP. Accuracy, clear communication and teamwork matter here — dependable supply operations make a real difference to frontline services.</p>
+          <p>Alongside this, I bring more than seven years of Oracle database experience: administration, performance optimisation, backup and recovery, cloud platforms and production support.</p>
+        </div>
+
+        <ul class="values">
+          <li class="reveal"><span class="v-num">01</span><h3>Problem solving</h3><p>A calm, analytical approach to operational and technical issues.</p></li>
+          <li class="reveal"><span class="v-num">02</span><h3>Communication</h3><p>Clear, customer-focused and easy to work with.</p></li>
+          <li class="reveal"><span class="v-num">03</span><h3>Teamwork</h3><p>Collaborative and dependable across diverse teams.</p></li>
+          <li class="reveal"><span class="v-num">04</span><h3>Continuous learning</h3><p>Always improving how the work gets done.</p></li>
+        </ul>
       </div>
     </section>
 
-    <section class="metrics section-wrap" aria-label="Professional highlights">
-      <div class="metric"><span class="metric-icon">⌘</span><div><strong>7+ Years</strong><small>Database experience</small></div></div>
-      <div class="metric"><span class="metric-icon">✚</span><div><strong>Queensland Health</strong><small>Current professional role</small></div></div>
-      <div class="metric"><span class="metric-icon">▤</span><div><strong>Oracle · SAP</strong><small>Technical & operational tools</small></div></div>
-      <div class="metric"><span class="metric-icon">◎</span><div><strong>Brisbane, QLD</strong><small>Australia</small></div></div>
-    </section>
+    <!-- SKILLS -->
+    <section class="section container" id="skills">
+      <header class="section-head reveal">
+        <span class="kicker">02 — Skills</span>
+        <h2>What I bring <em>to the team.</em></h2>
+      </header>
 
-    <section class="section section-wrap" id="about">
-      <div class="section-heading"><span class="eyebrow">A LITTLE ABOUT ME</span><h2>Two disciplines. <span class="gradient-text">One focus.</span></h2></div>
-      <div class="about-grid">
-        <div class="about-main glass">
-          <p class="lead">I’m a dedicated professional with experience across healthcare supply operations and enterprise database environments.</p>
-          <p>In my current role as a Senior Supply Officer with Queensland Health, I support the flow of medical supplies through ordering, scanning, requisition processing and procurement using SAP. I value accuracy, clear communication and teamwork because dependable supply operations make a real difference to frontline services.</p>
-          <p>Alongside this, I bring more than seven years of Oracle database experience, including administration, performance optimisation, backup and recovery, cloud platforms and production support.</p>
-          <div class="signature">Kushan Priyadasun <span>Professional · Reliable · Curious</span></div>
-        </div>
-        <div class="values-grid">
-          <article class="value-card"><span>✦</span><h3>Problem solving</h3><p>Calm, analytical approach to resolving operational and technical issues.</p></article>
-          <article class="value-card"><span>↗</span><h3>Communication</h3><p>Clear communication and a customer-focused working style.</p></article>
-          <article class="value-card"><span>◎</span><h3>Teamwork</h3><p>Collaborative, dependable and comfortable working with diverse teams.</p></article>
-          <article class="value-card"><span>＋</span><h3>Continuous learning</h3><p>Motivated to build knowledge and improve the way work gets done.</p></article>
-        </div>
-      </div>
-    </section>
+      <div class="bento">
+        <article class="card card-db reveal">
+          <div class="card-icon"><svg class="ico"><use href="#i-db"/></svg></div>
+          <h3>Database &amp; technical</h3>
+          <ul class="tech">
+            <li><span>Oracle Database 10g–23c</span><b class="lvl lvl-3">Advanced</b></li>
+            <li><span>RMAN · Data Pump · Recovery</span><b class="lvl lvl-3">Advanced</b></li>
+            <li><span>Data Guard · RAC · GoldenGate</span><b class="lvl lvl-2">Experienced</b></li>
+            <li><span>OCI · Autonomous Database</span><b class="lvl lvl-2">Experienced</b></li>
+            <li><span>PostgreSQL · SQL · PL/SQL</span><b class="lvl lvl-2">Experienced</b></li>
+            <li><span>OEM · Linux · Ansible · Jira</span><b class="lvl lvl-2">Experienced</b></li>
+          </ul>
+        </article>
 
-    <section class="section section-wrap" id="skills">
-      <div class="section-heading"><span class="eyebrow">WHAT I BRING</span><h2>Skills & <span class="gradient-text">expertise</span></h2><p>A blend of supply-chain operations, database technology and people skills.</p></div>
-      <div class="skills-layout">
-        <div class="glass skill-panel">
+        <article class="card card-supply reveal">
+          <div class="card-icon"><svg class="ico"><use href="#i-box"/></svg></div>
           <h3>Healthcare supply operations</h3>
-          <div class="skill-tags"><span>SAP</span><span>Medical supplies ordering</span><span>Scanning & processing</span><span>Requisitions</span><span>Procurement</span><span>Stock coordination</span><span>Documentation</span></div>
-          <h3 class="subheading">Professional strengths</h3>
-          <div class="skill-tags muted-tags"><span>Teamwork</span><span>Communication</span><span>Customer service</span><span>Problem solving</span><span>Attention to detail</span><span>Adaptability</span></div>
+          <div class="tags">
+            <span>SAP</span><span>Medical supplies ordering</span><span>Scanning &amp; processing</span>
+            <span>Requisitions</span><span>Procurement</span><span>Stock coordination</span><span>Documentation</span>
+          </div>
+        </article>
+
+        <article class="card card-soft reveal">
+          <div class="card-icon"><svg class="ico"><use href="#i-people"/></svg></div>
+          <h3>Professional strengths</h3>
+          <div class="tags tags-quiet">
+            <span>Teamwork</span><span>Communication</span><span>Customer service</span>
+            <span>Problem solving</span><span>Attention to detail</span><span>Adaptability</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="section container" id="experience">
+      <header class="section-head reveal">
+        <span class="kicker">03 — Experience</span>
+        <h2>A career built on <em>keeping things running.</em></h2>
+      </header>
+
+      <ol class="timeline">
+        <li class="job reveal is-current">
+          <div class="job-when"><span class="pill pill-live"><span class="dot"></span>Current</span></div>
+          <div class="job-body">
+            <div class="job-title">
+              <h3>Senior Supply Officer</h3>
+              <p>Queensland Health · Queensland, Australia</p>
+            </div>
+            <ul>
+              <li>Order medical supplies and equipment to support operational requirements.</li>
+              <li>Scan and process incoming items and supply documentation.</li>
+              <li>Process requisitions and procurement activities using SAP.</li>
+              <li>Work collaboratively with teams and maintain accurate records.</li>
+            </ul>
+            <div class="job-tags"><span>SAP</span><span>Procurement</span><span>Healthcare</span></div>
+          </div>
+        </li>
+
+        <li class="job reveal">
+          <div class="job-when"><span>Oct 2024 — Present</span></div>
+          <div class="job-body">
+            <div class="job-title">
+              <h3>Oracle Database Administrator <span class="muted">· Freelance</span></h3>
+              <p>Australian logistics &amp; healthcare clients</p>
+            </div>
+            <ul>
+              <li>Administer, monitor and maintain Oracle databases for performance and reliability.</li>
+              <li>Perform backup and recovery using RMAN and Data Pump.</li>
+              <li>Support database security, patching, upgrades and migrations.</li>
+              <li>Troubleshoot incidents and provide documentation and recommendations.</li>
+            </ul>
+            <div class="job-tags"><span>RMAN</span><span>Data Pump</span><span>Patching</span></div>
+          </div>
+        </li>
+
+        <li class="job reveal">
+          <div class="job-when"><span>Feb 2022 — Oct 2024</span></div>
+          <div class="job-body">
+            <div class="job-title">
+              <h3>Database Administrator</h3>
+              <p>CodeGen International Pvt Ltd</p>
+            </div>
+            <ul>
+              <li>Managed on-premises and OCI database environments, including Oracle 19c and 23c.</li>
+              <li>Worked with Data Guard, RMAN, Autonomous Database and database refreshes.</li>
+              <li>Handled patching, user management, performance tuning and production support.</li>
+              <li>Used Oracle Enterprise Manager and Jira Service Desk for monitoring and support.</li>
+            </ul>
+            <div class="job-tags"><span>Oracle 19c / 23c</span><span>OCI</span><span>Data Guard</span></div>
+          </div>
+        </li>
+
+        <li class="job reveal">
+          <div class="job-when"><span>Nov 2018 — Feb 2022</span></div>
+          <div class="job-body">
+            <div class="job-title">
+              <h3>Database Engineer</h3>
+              <p>Onsys Technologies</p>
+            </div>
+            <ul>
+              <li>Supported Oracle 10g, 11g, 12c and 19c database environments.</li>
+              <li>Worked with RAC, Data Guard, GoldenGate, SQL tuning and RMAN.</li>
+              <li>Supported PostgreSQL EnterpriseDB, OEM monitoring and disaster recovery setups.</li>
+              <li>Collaborated with clients on database requirements, security and migrations.</li>
+            </ul>
+            <div class="job-tags"><span>RAC</span><span>GoldenGate</span><span>PostgreSQL</span></div>
+          </div>
+        </li>
+
+        <li class="job reveal">
+          <div class="job-when"><span>Jan 2017 — Oct 2018</span></div>
+          <div class="job-body">
+            <div class="job-title">
+              <h3>Database Engineer <span class="muted">· Internship</span></h3>
+              <p>Softline Technologies</p>
+            </div>
+            <ul>
+              <li>Built foundational experience in Linux and Oracle database administration.</li>
+              <li>Monitored databases and Oracle ERP servers and handled service requests.</li>
+              <li>Maintained technical documentation and supported daily operations.</li>
+            </ul>
+            <div class="job-tags"><span>Linux</span><span>Oracle ERP</span></div>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- CREDENTIALS -->
+    <section class="section container" id="credentials">
+      <header class="section-head reveal">
+        <span class="kicker">04 — Credentials</span>
+        <h2>Education &amp; <em>certifications.</em></h2>
+      </header>
+
+      <div class="creds">
+        <article class="cred cred-edu reveal">
+          <svg class="ico"><use href="#i-cap"/></svg>
+          <small>2015 — 2017</small>
+          <h3>B.Sc. General Degree in Applied Sciences</h3>
+          <p>University of Sri Jayewardenepura, Sri Lanka</p>
+        </article>
+        <article class="cred reveal">
+          <svg class="ico"><use href="#i-award"/></svg>
+          <small>2022</small>
+          <h3>Oracle Autonomous Database Cloud 2022 Professional</h3>
+          <p>Certification 1Z0-931-22</p>
+        </article>
+        <article class="cred reveal">
+          <svg class="ico"><use href="#i-award"/></svg>
+          <small>2021</small>
+          <h3>OCI Foundations Associate</h3>
+          <p>Oracle Cloud Infrastructure</p>
+        </article>
+        <article class="cred reveal">
+          <svg class="ico"><use href="#i-award"/></svg>
+          <small>2019</small>
+          <h3>Oracle Database 12c Administrator Certified Associate</h3>
+          <p>Oracle Database</p>
+        </article>
+        <article class="cred reveal">
+          <svg class="ico"><use href="#i-award"/></svg>
+          <small>2019</small>
+          <h3>Oracle Autonomous Database Cloud Certified Specialist</h3>
+          <p>Oracle Autonomous Database</p>
+        </article>
+        <article class="cred reveal">
+          <svg class="ico"><use href="#i-award"/></svg>
+          <small>Additional</small>
+          <h3>ICDL — International Computer Driving Licence</h3>
+          <p>Microsoft Office suite</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="section container" id="gallery" aria-label="Portraits">
+      <div class="gallery">
+        <figure class="reveal"><img src="assets/images/kushan-office.jpg" width="761" height="506" loading="lazy" alt="Kushan Priyadasun in an office setting"></figure>
+        <figure class="reveal"><img src="assets/images/kushan-original-upscaled.jpg" width="1536" height="1542" loading="lazy" alt="Portrait of Kushan Priyadasun"></figure>
+        <figure class="reveal"><img src="assets/images/kushan-editorial.jpg" width="761" height="507" loading="lazy" alt="Studio portrait of Kushan Priyadasun"></figure>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section container" id="contact">
+      <div class="contact reveal">
+        <span class="kicker kicker-light">05 — Contact</span>
+        <h2>Have an opportunity <em>in mind?</em></h2>
+        <p>I’d be happy to connect, share my experience and explore how I can contribute to your team.</p>
+
+        <div class="contact-mail">
+          <a class="mail-link" href="mailto:Kushanpriyadasun123@gmail.com">Kushanpriyadasun123@gmail.com</a>
+          <button class="copy-btn" type="button" data-copy="Kushanpriyadasun123@gmail.com" aria-label="Copy email address">
+            <svg class="ico ico-copy"><use href="#i-copy"/></svg>
+            <svg class="ico ico-check"><use href="#i-check"/></svg>
+            <span class="copy-label">Copy</span>
+          </button>
         </div>
-        <div class="glass skill-panel">
-          <h3>Database & technical skills</h3>
-          <div class="tech-list">
-            <div><span>Oracle Database (10g–23c)</span><b>Advanced</b></div>
-            <div><span>RMAN · Data Pump · Recovery</span><b>Advanced</b></div>
-            <div><span>Data Guard · RAC · GoldenGate</span><b>Experienced</b></div>
-            <div><span>OCI · Autonomous Database</span><b>Experienced</b></div>
-            <div><span>PostgreSQL · SQL · PL/SQL</span><b>Experienced</b></div>
-            <div><span>OEM · Linux · Ansible · Jira</span><b>Experienced</b></div>
-          </div>
-          <p class="note">Experience levels are descriptive, not formal proficiency ratings.</p>
-        </div>
-      </div>
-    </section>
 
-    <section class="section section-wrap" id="experience">
-      <div class="section-heading"><span class="eyebrow">MY PROFESSIONAL JOURNEY</span><h2>Experience that <span class="gradient-text">makes an impact</span></h2></div>
-      <div class="timeline">
-        <article class="timeline-item current">
-          <div class="timeline-date">CURRENT ROLE</div><div class="timeline-marker"></div>
-          <div class="timeline-content glass"><div class="job-top"><div><h3>Senior Supply Officer</h3><p class="company">Queensland Health · Queensland, Australia</p></div><span class="job-tag">Healthcare operations</span></div>
-            <ul><li>Order medical supplies and equipment to support operational requirements.</li><li>Scan and process incoming items and supply documentation.</li><li>Process requisitions and procurement activities using SAP.</li><li>Work collaboratively with teams and maintain accurate records.</li></ul>
-          </div>
-        </article>
-        <article class="timeline-item">
-          <div class="timeline-date">OCT 2024 — PRESENT</div><div class="timeline-marker"></div>
-          <div class="timeline-content glass"><div class="job-top"><div><h3>Oracle Database Administrator · Freelancer</h3><p class="company">Australian logistics & healthcare clients</p></div><span class="job-tag">Database administration</span></div>
-            <ul><li>Administer, monitor and maintain Oracle databases for performance and reliability.</li><li>Perform backup and recovery using RMAN and Data Pump.</li><li>Support database security, patching, upgrades and migrations.</li><li>Troubleshoot incidents and provide documentation and recommendations.</li></ul>
-          </div>
-        </article>
-        <article class="timeline-item">
-          <div class="timeline-date">FEB 2022 — OCT 2024</div><div class="timeline-marker"></div>
-          <div class="timeline-content glass"><div class="job-top"><div><h3>Database Administrator</h3><p class="company">CodeGen International Pvt Ltd</p></div><span class="job-tag">Oracle 19c / 23c · OCI</span></div>
-            <ul><li>Managed on-premises and OCI database environments, including Oracle 19c and 23c.</li><li>Worked with Data Guard, RMAN, Autonomous Database and database refreshes.</li><li>Handled patching, user management, performance tuning and production support.</li><li>Used Oracle Enterprise Manager and Jira Service Desk for monitoring and support.</li></ul>
-          </div>
-        </article>
-        <article class="timeline-item">
-          <div class="timeline-date">NOV 2018 — FEB 2022</div><div class="timeline-marker"></div>
-          <div class="timeline-content glass"><div class="job-top"><div><h3>Database Engineer</h3><p class="company">Onsys Technologies</p></div><span class="job-tag">Oracle · PostgreSQL</span></div>
-            <ul><li>Supported Oracle 10g, 11g, 12c and 19c database environments.</li><li>Worked with RAC, Data Guard, GoldenGate, SQL tuning and RMAN.</li><li>Supported PostgreSQL EnterpriseDB, OEM monitoring and disaster recovery setups.</li><li>Collaborated with clients on database requirements, security and migrations.</li></ul>
-          </div>
-        </article>
-        <article class="timeline-item">
-          <div class="timeline-date">JAN 2017 — OCT 2018</div><div class="timeline-marker"></div>
-          <div class="timeline-content glass"><div class="job-top"><div><h3>Database Engineer · Internship</h3><p class="company">Softline Technologies</p></div><span class="job-tag">Career foundation</span></div>
-            <ul><li>Built foundational experience in Linux and Oracle database administration.</li><li>Monitored databases and Oracle ERP servers and handled service requests.</li><li>Maintained technical documentation and supported daily operations.</li></ul>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="section section-wrap" id="education">
-      <div class="section-heading"><span class="eyebrow">LEARNING & DEVELOPMENT</span><h2>Education & <span class="gradient-text">certifications</span></h2></div>
-      <div class="credentials-grid">
-        <article class="glass credential"><span class="credential-icon">◈</span><div><small>2015 — 2017</small><h3>B.Sc. General Degree in Applied Sciences</h3><p>University of Sri Jayewardenepura · Sri Lanka</p></div></article>
-        <article class="glass credential"><span class="credential-icon">✧</span><div><small>2022</small><h3>Oracle Autonomous Database Cloud 2022 Professional</h3><p>Certification 1Z0-931-22</p></div></article>
-        <article class="glass credential"><span class="credential-icon">✧</span><div><small>2021</small><h3>Oracle Cloud Infrastructure Foundations Associate</h3><p>Oracle Cloud Infrastructure</p></div></article>
-        <article class="glass credential"><span class="credential-icon">✧</span><div><small>2019</small><h3>Oracle Database 12c Administrator Certified Associate</h3><p>Oracle Database certification</p></div></article>
-        <article class="glass credential"><span class="credential-icon">✧</span><div><small>2019</small><h3>Oracle Autonomous Database Cloud Certified Specialist</h3><p>Oracle Autonomous Database</p></div></article>
-        <article class="glass credential"><span class="credential-icon">✧</span><div><small>ADDITIONAL</small><h3>ICDL · International Computer Driving Licence</h3><p>Microsoft Office suite</p></div></article>
-      </div>
-    </section>
-
-    <section class="section section-wrap" id="gallery">
-      <div class="section-heading"><span class="eyebrow">A FEW PORTRAITS</span><h2>Professional <span class="gradient-text">profile</span></h2><p>Portrait variations prepared from my supplied photo.</p></div>
-      <div class="gallery-grid">
-        <figure class="gallery-card gallery-tall"><img src="assets/images/kushan-original-upscaled.jpg" alt="Original portrait, upscaled"><figcaption><b>Signature portrait</b><span>Original photo · enhanced resolution</span></figcaption></figure>
-        <figure class="gallery-card"><img src="assets/images/kushan-office.jpg" alt="Kushan in a modern office portrait"><figcaption><b>Corporate profile</b><span>Office-inspired portrait</span></figcaption></figure>
-        <figure class="gallery-card"><img src="assets/images/kushan-editorial.jpg" alt="Kushan in a studio portrait"><figcaption><b>Studio portrait</b><span>Editorial-style portrait</span></figcaption></figure>
-      </div>
-    </section>
-
-    <section class="contact-section section-wrap" id="contact">
-      <div class="contact-card glass">
-        <div><span class="eyebrow">LET'S CONNECT</span><h2>Have an opportunity<br>or a project in mind?</h2><p>I’d be happy to connect, share my experience and explore how I can contribute to your team.</p></div>
-        <div class="contact-details">
-          <a href="mailto:Kushanpriyadasun123@gmail.com"><span>✉</span><div><small>Email</small><b>Kushanpriyadasun123@gmail.com</b></div></a>
-          <a href="tel:+61451906979"><span>☎</span><div><small>Phone</small><b>+61 451 906 979</b></div></a>
-          <div><span>⌖</span><div><small>Location</small><b>Brisbane, Queensland, Australia</b></div></div>
-          <a href="assets/Kushan-Priyadasun-CV.pdf" download><span>↓</span><div><small>Full career history</small><b>Download my CV</b></div></a>
+        <div class="contact-grid">
+          <a href="tel:+61451906979"><svg class="ico"><use href="#i-phone"/></svg><span><small>Phone</small>+61 451 906 979</span></a>
+          <div><svg class="ico"><use href="#i-pin"/></svg><span><small>Location</small>Brisbane, QLD, Australia</span></div>
+          <a href="assets/Kushan-Priyadasun-CV.pdf" download><svg class="ico"><use href="#i-download"/></svg><span><small>Full history</small>Download CV (PDF)</span></a>
         </div>
       </div>
     </section>
   </main>
-  <footer class="footer section-wrap"><a class="brand" href="#top"><span class="brand-mark">KP</span><span>Kushan<span class="accent">.</span></span></a><p>Build with purpose. Learn continuously. Make a difference.</p><small>© <span id="year"></span> Kushan Priyadasun. All rights reserved.</small></footer>
+
+  <footer class="footer container">
+    <span>© <span id="year">2026</span> Kushan Priyadasun</span>
+    <span>Build with purpose. Learn continuously.</span>
+    <a href="#top">Back to top ↑</a>
+  </footer>
+
   <script src="script.js"></script>
 </body>
 </html>
